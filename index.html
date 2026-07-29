@@ -371,8 +371,9 @@ section{padding-block:var(--section-y)}
    ============================================================ */
 .split{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(2.25rem,5vw,4.5rem)}
 /* When one column is much taller than the other (a long list beside a short
-   image), centring leaves the image floating. Align to the top instead. */
-.split--top{align-items:start}
+   image), centring leaves the image floating and top-aligning leaves a hole
+   under it. Let the image stretch to the height of the text column instead. */
+.split--top{align-items:stretch}
 .split--flip .split__media{order:2}
 .split__media{position:relative}
 .split__media img{width:100%;aspect-ratio:4/5;object-fit:cover}
@@ -380,7 +381,9 @@ section{padding-block:var(--section-y)}
 /* the aerial is landscape, so it gets its own ratio rather than being
    cropped into the portrait frame the other split images use */
 .split__media--aerial{
-  aspect-ratio:5/4;
+  /* no fixed aspect-ratio: inside .split--top this stretches to match the
+     list beside it. The min-height covers the single-column mobile case. */
+  min-height:clamp(280px,34vw,460px);
   background:var(--img-aerial) center/cover no-repeat;
   border:1px solid rgba(111,143,163,.35);
 }
@@ -582,8 +585,11 @@ select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns=
   border-top:1px solid rgba(111,143,163,.55); /* blue hairline, not grey */
   font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.62);
 }
+/* Extra bottom padding so the last line clears the two fixed review chips
+   in the corners. Reduce to 1.5rem once those are removed for launch. */
 .footer__bottom{
-  border-top:1px solid rgba(255,255,255,.14);padding-block:1.5rem;
+  border-top:1px solid rgba(255,255,255,.14);
+  padding:1.5rem 0 5rem;
   display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;
   font-size:.78rem;color:rgba(255,255,255,.5);
 }
