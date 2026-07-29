@@ -164,7 +164,13 @@ section{padding-block:var(--section-y)}
   margin:0 0 1.1rem;
   display:block;
 }
-.eyebrow--light{color:#DCE6EC}
+/* Over a photograph, pure white rather than the pale blue. The blue tint only
+   reached 4.00:1 against the hero backdrop, under the 4.5:1 AA minimum for
+   text this small, and white also matches the headline so the lockup reads as
+   one unit. The pale blue survives on the dark founding block below, where the
+   backdrop is a flat colour and it clears AA comfortably. */
+.eyebrow--light{color:#FFFFFF;text-shadow:0 1px 14px rgba(18,20,18,.45)}
+.founding .eyebrow--light{color:#DCE6EC;text-shadow:none}
 
 /* Thin copper rule: the "discovered detail" from the brand doc.
    .rule--blue alternates the same hairline in Coastal Blue so the accent
@@ -289,10 +295,16 @@ section{padding-block:var(--section-y)}
    is now optically centred and the "Opening October 2026" line is real,
    editable, translatable, selectable text rather than pixels.
    ============================================================ */
+/* One centred group, not top-and-bottom.
+   This used to be justify-content:space-between, which pinned the buttons to
+   the bottom of the viewport. That worked while a detail bar and a date line
+   filled the middle. With both removed it held open about 400px of dead space
+   between the subhead and the buttons. Centring the whole stack fixes it and
+   keeps the composition balanced at any viewport height. */
 .hero{
-  position:relative;min-height:min(94vh,880px);
-  display:flex;flex-direction:column;justify-content:space-between;
-  padding:clamp(7rem,14vh,9rem) 0 0;
+  position:relative;min-height:min(92vh,860px);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:clamp(6rem,12vh,8rem) 0 clamp(3rem,6vh,4.5rem);
   overflow:hidden;isolation:isolate;
 }
 .hero__bg{
@@ -316,10 +328,10 @@ section{padding-block:var(--section-y)}
 .hero__scrim{
   position:absolute;inset:0;z-index:-1;
   background:linear-gradient(to bottom,
-    rgba(22,24,22,.68) 0%,
-    rgba(22,24,22,.44) 34%,
-    rgba(22,24,22,.30) 60%,
-    rgba(22,24,22,.72) 100%);
+    rgba(22,24,22,.56) 0%,
+    rgba(22,24,22,.46) 30%,
+    rgba(22,24,22,.44) 70%,
+    rgba(22,24,22,.62) 100%);
 }
 .hero__top{text-align:center;padding-inline:var(--gutter);max-width:980px;margin-inline:auto}
 .hero h1{color:#fff;text-shadow:0 2px 30px rgba(18,20,18,.5);margin-bottom:.4em}
@@ -332,9 +344,9 @@ section{padding-block:var(--section-y)}
   text-shadow:0 1px 18px rgba(18,20,18,.55);
 }
 
-.hero__bottom{padding:0 var(--gutter) clamp(3rem,7vh,5rem)}
-/* margin-bottom removed: it was spacing the buttons off a detail bar that
-   is no longer here, which left a band of dead space at the fold */
+/* Sits directly under the subhead now, at a normal interval, rather than
+   being pushed to the bottom of the viewport. */
+.hero__bottom{padding-inline:var(--gutter);margin-top:clamp(2.25rem,4.5vh,3.25rem)}
 .hero__actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center}
 .hero__actions .btn--primary{background:#fff;color:var(--color-text);border-color:#fff}
 .hero__actions .btn--primary:hover{background:var(--color-accent-deep);border-color:var(--color-accent-deep);color:#fff}
