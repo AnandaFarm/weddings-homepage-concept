@@ -1,0 +1,3 @@
+# Review concept, not the live site. Keep search engines out entirely.
+User-agent: *
+Disallow: /
