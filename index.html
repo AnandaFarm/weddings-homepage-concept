@@ -240,7 +240,7 @@ section{padding-block:var(--section-y)}
 .hero__sub{
   font-family:var(--font-heading);font-size:clamp(1.2rem,2.4vw,1.75rem);
   font-weight:300;line-height:1.4;color:#fff;
-  max-width:26ch;margin:0 auto 1.35rem;
+  max-width:40ch;margin:0 auto 1.35rem;  /* 26ch broke this into three ragged lines */
   text-shadow:0 1px 18px rgba(18,20,18,.55);
 }
 .hero__body{
@@ -295,14 +295,22 @@ section{padding-block:var(--section-y)}
    ============================================================ */
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.25rem,2.5vw,2rem);margin-top:clamp(2.5rem,5vw,3.5rem)}
 .trio figure{margin:0}
+/* Longhands, not the `background` shorthand.
+   The shorthand resets background-image to none, and because `.trio .shot`
+   is more specific than a single `.shot--ceremony` class it beat every
+   modifier. The result was three empty boxes. Longhands keep the modifiers
+   free to set only the image. Same trap applies to .gtiles .tile below. */
 .trio .shot{
   display:block;aspect-ratio:3/2;
-  background:var(--color-primary) center/cover no-repeat;
+  background-color:var(--color-primary);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
   border:1px solid rgba(111,143,163,.3);
 }
-.shot--ceremony{background-image:var(--img-ceremony)}
-.shot--reception{background-image:var(--img-barn)}
-.shot--aerial{background-image:var(--img-aerial)}
+.trio .shot--ceremony{background-image:var(--img-ceremony)}
+.trio .shot--reception{background-image:var(--img-barn)}
+.trio .shot--aerial{background-image:var(--img-aerial)}
 .trio figcaption{
   font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;
   color:var(--color-accent-deep);margin-top:.75rem;line-height:1.5;
@@ -330,17 +338,20 @@ section{padding-block:var(--section-y)}
 .gtiles figure{margin:0}
 .gtiles .tile{
   display:block;aspect-ratio:4/5;
-  background:var(--color-surface) center/cover no-repeat;
+  background-color:var(--color-surface);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
   border:1px solid rgba(111,143,163,.3);
   transition:transform .4s cubic-bezier(.2,.7,.3,1),box-shadow .4s;
 }
 .gtiles figure:hover .tile{transform:translateY(-4px);box-shadow:0 14px 34px rgba(32,35,33,.15)}
-.tile--couple{background-image:var(--img-couple)}
-.tile--pergola{background-image:var(--img-pergola)}
+.gtiles .tile--couple{background-image:var(--img-couple)}
+.gtiles .tile--pergola{background-image:var(--img-pergola)}
 /* honest empty state: there are no real weddings to show yet */
-.tile--soon{
+.gtiles .tile--soon{
   display:flex;align-items:center;justify-content:center;text-align:center;
-  padding:1.5rem;border-style:dashed;background:var(--color-surface);
+  padding:1.5rem;border:1px dashed var(--color-border);
 }
 .tile--soon span{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#6E675E;line-height:1.7}
 .gtiles figcaption{font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent-deep);margin-top:.7rem}
