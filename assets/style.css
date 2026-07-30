@@ -56,15 +56,15 @@
      The two used as inline <img> are deliberately NOT also defined as
      variables here; doing both embeds the same payload twice and added
      460KB to this file before it was caught.                        */
-  --img-barn-blur:url("assets/img/hero-barn-blur.jpg");
-  --img-ceremony:url("assets/img/ceremony-field.jpg");
-  --img-barn:url("assets/img/reception-barn.jpg");
-  --img-aerial:url("assets/img/aerial-dusk.jpg");
-  --img-pergola:url("assets/img/pergola-render.jpg");
-  --img-couple:url("assets/img/styled-couple.jpg");
-  --img-sunnhemp:url("assets/img/sunnhemp.jpg");
-  --img-field-house:url("assets/img/field-house.jpg");
-  --img-bouquets:url("assets/img/bouquets.jpg");
+  --img-barn-blur:url("img/hero-barn-blur.jpg");
+  --img-ceremony:url("img/ceremony-field.jpg");
+  --img-barn:url("img/reception-barn.jpg");
+  --img-aerial:url("img/aerial-dusk.jpg");
+  --img-pergola:url("img/pergola-render.jpg");
+  --img-couple:url("img/styled-couple.jpg");
+  --img-sunnhemp:url("img/sunnhemp.jpg");
+  --img-field-house:url("img/field-house.jpg");
+  --img-bouquets:url("img/bouquets.jpg");
 
   /* ACCESSIBILITY NOTE FOR DEVELOPER:
      Coastal Blue #6F8FA3 on Soft White = 3.15:1. That passes AA for large
