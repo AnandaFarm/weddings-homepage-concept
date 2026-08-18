@@ -41,13 +41,15 @@
      the LCP element. The role="img" plus aria-label pattern below is an
      accessible stand-in for this single-file review copy only.
 
-     NINE IMAGES. Five are real photographs of the farm:
-       inline <img>      farmhouse above the sunflower field
+     NINE IMAGES. Four are real photographs of the farm:
        --img-ceremony    field with the pavilion and sabal palms
        --img-aerial      property at sunset, lit structures, bay behind
        inline <img>      cut sunflowers, autumn tones
        --img-sunnhemp    yellow blooms against sky
-     Four are not:
+     Five are not:
+       inline <img>      sunflower field with the white farmhouse. Forward-looking
+                         render: the house is being painted white. It replaced a
+                         real photograph of the same view in the current colour.
        --img-barn-blur   barn render, blurred, hero background
        --img-barn        barn render, sharp
        --img-pergola     pergola concept render
