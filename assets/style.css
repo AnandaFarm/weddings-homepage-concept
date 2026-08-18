@@ -314,12 +314,7 @@ section{padding-block:var(--section-y)}
 .gtiles figure:hover .tile{transform:translateY(-4px);box-shadow:0 14px 34px rgba(32,35,33,.15)}
 .gtiles .tile--couple{background-image:var(--img-couple)}
 .gtiles .tile--pergola{background-image:var(--img-pergola)}
-/* honest empty state: there are no real weddings to show yet */
-.gtiles .tile--soon{
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  padding:1.5rem;border:1px dashed var(--color-border);
-}
-.tile--soon span{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#6E675E;line-height:1.7}
+.gtiles .tile--sunnhemp{background-image:var(--img-sunnhemp)}
 .gtiles figcaption{font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent-deep);margin-top:.7rem}
 .band .gtiles figcaption{color:var(--color-accent-on-oak)}
 @media (max-width:700px){.gtiles{grid-template-columns:1fr 1fr}.gtiles figure:last-child{grid-column:1/-1;max-width:50%}}
@@ -365,19 +360,6 @@ section{padding-block:var(--section-y)}
    empty press row reads worse than no press row.
    ============================================================ */
 .proof{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4rem);align-items:start}
-.logo-row{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:1.5rem}
-.logo-box{
-  border:1px dashed var(--color-border);background:var(--color-surface);
-  aspect-ratio:5/2;display:flex;align-items:center;justify-content:center;
-  font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#7C7365;text-align:center;padding:.7rem;
-}
-.quote{
-  background:var(--color-surface);border:1px solid var(--color-border);
-  border-left:2px solid var(--color-accent);
-  padding:clamp(1.5rem,3vw,2rem);margin-top:1.5rem;
-}
-.quote p{font-family:var(--font-heading);font-size:clamp(1.1rem,1.8vw,1.35rem);font-style:italic;line-height:1.5;color:var(--color-muted-text);margin:0 0 1rem}
-.quote cite{font-family:var(--font-body);font-style:normal;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--color-accent-deep)}
 @media (max-width:780px){.proof{grid-template-columns:1fr}}
 
 /* ============================================================
@@ -534,11 +516,6 @@ body.no-anno .anno{display:none}
 .ggrid .cell--sunnhemp{background-image:var(--img-sunnhemp)}
 .ggrid .cell--couple{background-image:var(--img-couple)}
 .ggrid .cell--pergola{background-image:var(--img-pergola)}
-.ggrid .cell--empty{
-  border-style:dashed;display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:1rem;
-}
-.ggrid .cell--empty span{font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:#6E675E;line-height:1.6}
 @media (max-width:900px){.ggrid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:600px){.ggrid{grid-template-columns:repeat(2,1fr)}}
 
