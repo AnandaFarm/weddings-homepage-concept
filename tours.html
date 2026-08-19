@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Schedule a Tour | Ananda Farm Weddings</title>
-<meta name="description" content="Walk the property, view the ceremony and reception spaces, ask questions, and discuss availability. Book a private tour of Ananda Farm.">
+<meta name="description" content="Walk the flower field, see the barn as it is being finished, and talk through your date. Book a private tour of Ananda Farm on Terra Ceia Island.">
 
 <!-- KEEP THIS TAG WHILE THIS SITS ON A PUBLIC REVIEW URL.
      Without it Google can index the concept, which would compete with the
@@ -47,63 +47,65 @@
   <div class="phero__inner">
     <span class="eyebrow eyebrow--light">Visit</span>
     <h1>Schedule a Tour</h1>
-    <p class="phero__sub">Walk the property and picture your wedding day here.</p>
+    <p class="phero__sub">The farm makes more sense in person than it does in photographs.</p>
     <div class="btn-row btn-row--center">
-      <a href="#book" class="btn btn--onPhoto">See Available Times</a>
+      <a href="#book" class="btn btn--onPhoto">Choose a Tour Time</a>
     </div>
   </div>
 </section>
 
+<!-- ============================ BOOKING ============================
+     One dominant action. Everything above and below it exists to
+     support this click, because it is the primary conversion on the
+     whole site.
+     ================================================================= -->
 <section id="book">
   <div class="wrap wrap--narrow center">
-    <p class="lede">We would love to show you Ananda Farm and help you picture your wedding day here. Choose a tour time that works for you.</p>
-    <p class="muted">During your visit you can walk the property, view ceremony and reception spaces, ask questions, and discuss availability.</p>
+    <p class="lede">Tours run about an hour, and we book one at a time. While you are here the property is yours.</p>
+    <div class="tour-facts">
+      <span><strong>An hour</strong> on the property</span>
+      <span><strong>Weekdays</strong> 10am to 6pm</span>
+      <span><strong>Saturdays</strong> mornings</span>
+    </div>
+    <div class="book-cta">
+      <a href="https://anandafarm420885.hbportal.co/public/6a7f52ecdca7c2f7f446c3b6" class="btn btn--primary btn--xl">Choose a Tour Time</a>
+      <p class="book-cta__note">Opens our booking form. Takes about two minutes.</p>
+    </div>
+    <p class="muted book-alt">Prefer to ask a few questions first? <a href="contact.html">Send us your details</a> and we will come back to you.</p>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap">
-    <div class="embed-slot">
-      <span>Scheduler embed</span>
-      <strong>HoneyBook booking calendar goes here</strong>
-      <p>A live calendar showing real availability, so a couple books themselves in rather than emailing to ask what is free. This is the primary conversion on the whole site.</p>
-    </div>
-    <div class="wrap"><div class="anno"><strong>This is the most important functional gap on the live site.</strong> The real <code>/tours/</code> page currently contains an HTML comment where the embed should go, which means the primary conversion in your developer&rsquo;s plan does not work at all yet.<br><br>Once HoneyBook is set up, drop its scheduler here and point every &ldquo;Schedule a Tour&rdquo; link on the site at this page. Until then, the fallback below routes people to the inquiry form so nobody hits a dead end.</div></div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
     <div class="split">
-      <div class="split__media split__media--wide" style="aspect-ratio:3/2;background:var(--img-aerial) center/cover no-repeat;border:1px solid rgba(111,143,163,.3)" role="img" aria-label="Ananda Farm from the air at sunset, with lit structures, sabal palms and the bay behind the tree line."></div>
+      <div class="split__media split__media--wide" style="aspect-ratio:3/2;background-color:var(--color-primary);background-image:var(--img-aerial);background-position:center;background-size:cover;background-repeat:no-repeat;border:1px solid rgba(111,143,163,.3)" role="img" aria-label="Ananda Farm from the air at sunset, with lit structures, sabal palms and the bay behind the tree line."></div>
       <div>
         <span class="eyebrow">What to expect</span>
         <hr class="rule">
         <h2>What a tour covers</h2>
         <ul class="ticks">
-          <li>The ceremony area, and where your guests would sit</li>
-          <li>The reception barn and how it can be laid out</li>
-          <li>Where cocktail hour happens, and the walk between spaces</li>
+          <li>The flower field, and where your guests would sit</li>
+          <li>The reception barn as it is being finished</li>
+          <li>The walk between spaces, and where cocktail hour happens</li>
           <li>Lodging and the bridal suite</li>
           <li>Parking, access, and the rain plan</li>
-          <li>Dates still open, and what a day costs</li>
+          <li>Dates still open for your season, and pricing</li>
         </ul>
-        <div class="btn-row" style="margin-top:1.85rem">
-          <a href="contact.html" class="btn btn--secondary">Ask a Question First</a>
-        </div>
+        <p class="muted">Most of the hour is spent outside, so wear shoes you do not mind getting dusty. Bring anyone who is helping you decide.</p>
       </div>
     </div>
+    <div class="wrap"><div class="anno"><strong>This page was a placeholder box. It is now wired to the live HoneyBook form.</strong> The booking button goes to the real &ldquo;Inquiry &amp; Schedule a Tour&rdquo; form, which asks the qualifying questions first and shows the calendar last, so a couple cannot book before telling you about their wedding.<br><br><strong>The calendar can be embedded rather than linked.</strong> HoneyBook does provide an embed code, so the calendar can sit inline on this page and a couple never leaves the site. Paste the snippet into <code>HB_EMBED</code> in the build script and this section switches over. It is held out for now only because the code carries a signed token that cannot be typed from memory.<br><br><strong>Two things still make this fail silently.</strong> Jen&rsquo;s calendar is not connected to HoneyBook, so nothing stops a double booking. And the client-facing email is still <code>mailman@honeybook.com</code>, so replies will not look like they came from Ananda. Both are sign-in steps that only you or Jen can complete.<br><br><strong>The hours shown here match HoneyBook exactly.</strong> Weekdays 10am to 6pm, Saturday mornings, Sundays closed. If Chris changes the real availability, change it in both places or this page starts lying.</div></div>
   </div>
 </section>
 
-<section class="band band--surface">
-  <div class="wrap wrap--narrow center">
-    <span class="eyebrow">Not ready to visit</span>
-    <hr class="rule rule--center rule--blue">
-    <h2>Send us your details instead</h2>
-    <p class="lede">If you are still narrowing down venues, tell us your date and guest count and we will come back with availability and pricing.</p>
-    <div class="btn-row btn-row--center" style="margin-top:2rem">
-      <a href="contact.html" class="btn btn--primary">Start Planning</a>
+<section class="tour">
+  <div class="tour__bg" role="img" aria-label="Tall yellow blooms photographed from below against a blue sky with scattered cloud."></div>
+  <div class="tour__scrim"></div>
+  <div class="wrap wrap--narrow">
+    <span class="eyebrow eyebrow--light">Come and see it</span>
+    <h2>Pick a time and walk the property with us.</h2>
+    <div class="btn-row btn-row--center" style="margin-top:2.1rem">
+      <a href="https://anandafarm420885.hbportal.co/public/6a7f52ecdca7c2f7f446c3b6" class="btn btn--onPhoto">Choose a Tour Time</a>
     </div>
   </div>
 </section>
